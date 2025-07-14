@@ -1,28 +1,41 @@
 <?php
 require('../inc/functions.php');
-$categorie = select_categorie_objet();
-$nom_objet = lister_objet();
+require('menu.php');
+$categories = select_categorie_objet();
+$objets = lister_objet();
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Liste d'objets</title>
+    <title>Objets</title>
+    <link href="../assets/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-    <table border=1px solid>
-        <tr>
-            <?php foreach($categorie as $cat) { ?>
-                <th><?php echo $cat['nom_categorie'] ?></th>
+    <form method="GET">
+        <select name="categorie">
+            <option value="">Toutes les catégories</option>
+            <?php foreach($categories as $cat) { ?>
+                <option value="<?= $cat['id'] ?>"><?= $cat['nom_categorie'] ?></option>
             <?php } ?>
-        </tr>
+        </select>
+        <input type="text" name="nom" placeholder="Nom objet">
+        <label><input type="checkbox" name="dispo"> Disponible</label>
+        <input type="submit" value="Rechercher">
+    </form>
+
+    <table border="1">
+        <tr><th>Image</th><th>Nom</th><th>Date retour</th></tr>
+        <?php foreach($objets as $obj) { ?>
         <tr>
-            <?php foreach($nom_objet as $nom) { ?>
-                <th><?php echo $nom['nom_objet'] ?></th>
-            <?php } ?>
+            <td>
+                <img src="<?= $obj['image'] ?: '../assets/images/defaut.jpg' ?>" width="100">
+            </td>
+            <td><?= $obj['nom_objet'] ?></td>
+            <td><?= $obj['date_retour'] ?? 'Disponible' ?></td>
         </tr>
+        <?php } ?>
     </table>
 </body>
 </html>
