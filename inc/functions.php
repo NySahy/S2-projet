@@ -36,4 +36,16 @@ function select_categorie_objet(){
     }
     return $result;
 }
+
+function insert_image($nom_image){
+    $sql = "INSERT INTO s2_image_objet (nom_image) VALUES ('$nom_image')";  
+    $query = mysqli_query(dbconnect(), $sql);
+    return $query;
+}
+
+function select_image($nom_image){
+    $select = "SELECT * FROM s2_image_objet WHERE nom_image='$nom_image'";  
+    $query = mysqli_query(dbconnect(),$select);
+    return mysqli_fetch_assoc($query);
+}
 ?>

@@ -13,6 +13,15 @@ $objets = lister_objet();
     <link href="../assets/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
+    <h2>Uploader un fichier</h2> 
+    <form action="../traitement/traitement_upload.php" method="post" enctype="multipart/form-data"> 
+        <label for="fichier">Choisir un fichier :</label> 
+        <input type="file" name="fichier" id="fichier" required> 
+            <br><br> 
+        <input type="submit" value="Uploader"> 
+    </form>
+    <br>
+    <br>
     <form method="GET">
         <select name="categorie">
             <option value="">Toutes les catégories</option>
