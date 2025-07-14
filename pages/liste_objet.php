@@ -3,6 +3,7 @@ require('../inc/functions.php');
 require('menu.php');
 $categories = select_categorie_objet();
 $objets = lister_objet();
+$emprunt = emprunter_objet($objets['id_objet']);
 ?>
 
 <!DOCTYPE html>
@@ -35,14 +36,12 @@ $objets = lister_objet();
     </form>
 
     <table border="1">
-        <tr><th>Image</th><th>Nom</th><th>Date retour</th></tr>
+        <tr><th>Nom</th><th>Date retour</th></tr>
         <?php foreach($objets as $obj) { ?>
         <tr>
-            <td>
-                <img src="<?= $obj['image'] ?: '../assets/images/defaut.jpg' ?>" width="100">
-            </td>
             <td><?= $obj['nom_objet'] ?></td>
             <td><?= $obj['date_retour'] ?? 'Disponible' ?></td>
+            <td><button type="submit" class="btn btn-primary"><a href="emprunter.php?emp=<?=$emprunt['id_objet']?>" > </a>emprunter</button></a></td>
         </tr>
         <?php } ?>
     </table>

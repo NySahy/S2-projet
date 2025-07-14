@@ -48,4 +48,10 @@ function select_image($nom_image){
     $query = mysqli_query(dbconnect(),$select);
     return mysqli_fetch_assoc($query);
 }
+
+function emprunter_objet($id_objet): array|bool|null{
+    $select = "SELECT * FROM s2_emprunt WHERE id_objet='$id_objet'";  
+    $query = mysqli_query(dbconnect(),$select);
+    return mysqli_fetch_assoc($query);
+}
 ?>

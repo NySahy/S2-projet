@@ -1,28 +1,6 @@
-TodoList
-
-Version 1 -
-ETU4210
-
-
-
-ETU4287
-
-
-
-
-Version 2 -
-ETU4210
-
-
-
-ETU4287
-
-
-
-
-Version 3 -
-ETU4210
-
-
-
-ETU4287
+-alea ETU 004210
+page liste_objet
+    -boutton emprunter (ok)
+page emprunter 
+    -nouveau champ(delai de l'emprunt)(en cours)
+    -disponibilite de l'objet
