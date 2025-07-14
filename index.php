@@ -1,3 +1,3 @@
 <?php
-header('Location:pages/version1.php');
+header('Location:pages/inscription.php');
 ?>

@@ -13,7 +13,8 @@
         <input type="email" name="email" placeholder="Entrez votre email">
         <input type="password" name="password" placeholder="Entrez votre mot de passe">
         <input type="text" name="genre" placeholder="Entrez votre genre"> 
-        <input type="text" name="ville" placeholder="Entrez votre ville">   
+        <input type="text" name="ville" placeholder="Entrez votre ville">
+        <input type="submit" value="Valider">   
     </form>
 </body>
 </html>

@@ -9,7 +9,8 @@
 <body>
     <form action="../traitement/traitement_login.php" method="POST">
         <input type="email" name="email" placeholder="Entrez votre email">
-        <input type="password" name="password" placeholder="Entrez votre mot de passe">    
+        <input type="password" name="password" placeholder="Entrez votre mot de passe"> 
+        <input type="submit" value="Valider">      
     </form>
 </body>
 </html>
