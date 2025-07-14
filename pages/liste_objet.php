@@ -12,7 +12,7 @@ $nom_objet = lister_objet();
     <title>Liste d'objets</title>
 </head>
 <body>
-    <table>
+    <table border=1px solid>
         <tr>
             <?php foreach($categorie as $cat) { ?>
                 <th><?php echo $cat['nom_categorie'] ?></th>
