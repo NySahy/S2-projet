@@ -49,6 +49,7 @@
             <button type="submit" class="btn btn-success">S'inscrire</button>
         </div>
     </form>
+    <a href="login.php" class="btn btn-link mt-3">Déjà inscrit ? Connectez-vous</a>
 </div>
 
 </body>
