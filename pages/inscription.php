@@ -7,7 +7,7 @@
     <link href="../assets/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-    <form action="inscription.php" method="POST">
+    <form action="../traitement/traitement_inscription.php" method="POST">
         <input type="text" name="nom" placeholder="Entrez votre nom">
         <input type="date" name="date" placeholder="Entrez votre date de naissance">
         <input type="email" name="email" placeholder="Entrez votre email">

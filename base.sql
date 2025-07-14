@@ -1,4 +1,5 @@
-create database s2_pr
+create database s2_pr;
+use s2_pr;
 create table s2_membre(
     id_membre INT AUTO_INCREMENT PRIMARY KEY,
     nom VARCHAR(50) NOT NULL,

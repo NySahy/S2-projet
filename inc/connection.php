@@ -2,7 +2,7 @@
 function dbconnect() {
     static $link = null;
     if ($link === null) {
-        $link = mysqli_connect('localhost', 'root', '', '');
+        $link = mysqli_connect('localhost', 'root', '', 's2_pr');
         if (!$link) {
             die('Erreur de connexion : ' . mysqli_connect_error());
         }
