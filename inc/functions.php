@@ -54,4 +54,16 @@ function emprunter_objet($id_objet): array|bool|null{
     $query = mysqli_query(dbconnect(),$select);
     return mysqli_fetch_assoc($query);
 }
+
+function inserer_emprunt($nom_objet): array|bool|null{
+    $select = "INSERT INTO s2_objet (nom_objet) VALUES ('$nom_objet')";  
+    $query = mysqli_query(dbconnect(),$select);
+    return $query;
+}
+
+function select_emprunt($nom_objet): array|bool|null{
+    $select = "SELECT * FROM s2_objet WHERE nom_objet='$nom_objet'";  
+    $query = mysqli_query(dbconnect(),$select);
+    return mysqli_fetch_assoc($query);
+}
 ?>

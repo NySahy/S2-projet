@@ -4,3 +4,9 @@ page liste_objet
 page emprunter 
     -nouveau champ(delai de l'emprunt)(en cours)
     -disponibilite de l'objet
+
+-alea ETU 004287
+    -Ao anaty fiche_membre, afficher leurs listes d'emprunt :
+        -avy eo asiana bouton retour (rehefa manindry ilay bouton dia misy zone de liste hoe ok na abimé)
+        -Page milister ny objet ok (nombre de ok)
+        -Page milister ny objet abimé (nombre de abimé)

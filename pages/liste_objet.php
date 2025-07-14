@@ -4,6 +4,8 @@ require('menu.php');
 $categories = select_categorie_objet();
 $objets = lister_objet();
 $emprunt = emprunter_objet($objets['id_objet']);
+// $inserer = inserer_emprunt($nom_objet);
+// $select = select_emprunt($nom_objet);
 ?>
 
 <!DOCTYPE html>
@@ -41,7 +43,7 @@ $emprunt = emprunter_objet($objets['id_objet']);
         <tr>
             <td><?= $obj['nom_objet'] ?></td>
             <td><?= $obj['date_retour'] ?? 'Disponible' ?></td>
-            <td><button type="submit" class="btn btn-primary"><a href="emprunter.php?emp=<?=$emprunt['id_objet']?>" > </a>emprunter</button></a></td>
+            <td><button type="submit" class="btn btn-primary"><a href="emprunter.php?emp=<?=$emprunt['id_objet']?>"></a>emprunter</button></a></td>
         </tr>
         <?php } ?>
     </table>

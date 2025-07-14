@@ -16,7 +16,7 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="emprunt.php" method="post">
+    <form action="emprunter.php" method="post">
         <input type="date" name="debut">
         <input type="date" name="retour">
     </form>
